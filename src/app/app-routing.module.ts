@@ -18,6 +18,8 @@ const routes: Routes = [
   { path: '', redirectTo: '/dashborad', pathMatch: 'full' }
 ];
 
+//aaaaa
+
 @NgModule({
   declarations: [],
   imports: [
