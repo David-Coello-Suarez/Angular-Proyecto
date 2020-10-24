@@ -11,14 +11,9 @@ const routes: Routes = [
   // path: '/dashborad', PagesRouting
   // path: 'auth', AuthRouting
 
-  {
-    path: '**',
-    component: NopagefoundComponent
-  },
+  { path: '**', component: NopagefoundComponent },
   { path: '', redirectTo: '/dashborad', pathMatch: 'full' }
 ];
-
-//aaaaa
 
 @NgModule({
   declarations: [],
