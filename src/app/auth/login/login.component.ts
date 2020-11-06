@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,14 +7,22 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
 
-  constructor( private router: Router ) { }
+  public formSubmit: boolean = false;
 
-  ngOnInit(): void {
-  }
-  
-  login(){
-    this.router.navigateByUrl('/');
+  public login_form = this.fb.group({
+    email: ['d@mail.com', [Validators.required, Validators.email]],
+    password: ['12345', Validators.required],
+  })
+
+
+  constructor(private router: Router, private fb: FormBuilder) { }
+
+
+  login() {
+    
+
+    // this.router.navigateByUrl('/');
   }
 }
